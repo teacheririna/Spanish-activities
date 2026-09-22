@@ -7,123 +7,204 @@
 <title>Sra. Ottley's Spanish Activities</title>
 
 <style>
+:root {
+  --teal: #119c9b;
+  --deep: #087c7c;
+  --pink: #ed4f98;
+  --yellow: #ffd76a;
+  --cream: #fffaf0;
+  --ink: #26434a;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #e7faf7, #fff1f7);
-  color: #243b3b;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(
+    180deg,
+    #e9fbf8,
+    #fff7fb 58%,
+    #fff9e8
+  );
 }
 
-header {
-  background: #15958f;
-  color: white;
-  text-align: center;
-  padding: 38px 20px;
+/* HERO IMAGE */
+
+.hero {
+  max-width: 1180px;
+  margin: 20px auto 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 16px 40px rgba(24,105,105,.18);
+  border: 5px solid white;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 38px;
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-header p {
-  font-size: 19px;
-  margin: 10px 0 0;
-}
-
-.container {
-  max-width: 1050px;
-  margin: auto;
-  padding: 35px 20px;
-}
+/* TITLE AREA */
 
 .welcome {
   text-align: center;
-  margin-bottom: 30px;
+  padding: 25px 18px;
+  background: linear-gradient(
+    135deg,
+    #0e9c98,
+    #21b5ad
+  );
+  color: white;
 }
 
-.welcome h2 {
-  color: #15958f;
-  font-size: 28px;
-  margin-bottom: 8px;
+.welcome h1 {
+  margin: 0;
+  font-size: clamp(29px,5vw,48px);
 }
 
 .welcome p {
-  font-size: 18px;
+  font-size: clamp(16px,2vw,21px);
+  font-weight: 700;
+  margin: 8px 0 0;
 }
 
-.activities {
+/* MAIN AREA */
+
+.wrap {
+  max-width: 1100px;
+  margin: auto;
+  padding: 34px 20px 50px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.intro h2 {
+  color: var(--deep);
+  font-size: 31px;
+  margin: 0 0 7px;
+}
+
+.intro p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ACTIVITY CARDS */
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 22px;
 }
 
 .card {
   background: white;
-  border-radius: 22px;
-  padding: 28px 20px;
+  border-radius: 25px;
+  padding: 25px 20px;
   text-align: center;
-  box-shadow: 0 8px 22px rgba(0,0,0,.10);
-  border: 3px solid #d8f0ed;
+  box-shadow: 0 10px 25px rgba(47,91,96,.12);
+  border: 3px solid #ccefeb;
+  transition: .2s;
 }
 
-.card .icon {
-  font-size: 58px;
+.card:nth-child(2) {
+  border-color: #ffd2e5;
+}
+
+.card:nth-child(3) {
+  border-color: #ffe29a;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 54px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 7px 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #e7f8f6;
+  color: var(--deep);
+  font-weight: 900;
+  font-size: 13px;
 }
 
 .card h3 {
-  color: #15958f;
+  color: var(--deep);
   font-size: 23px;
-  margin: 12px 0 6px;
+  margin: 6px 0;
 }
 
 .card p {
-  min-height: 52px;
   line-height: 1.5;
+  min-height: 68px;
 }
 
-.button {
+/* BUTTONS */
+
+.go {
   display: inline-block;
-  margin-top: 12px;
-  padding: 13px 22px;
-  background: #f45b9c;
+  margin-top: 8px;
+  padding: 13px 24px;
+  border-radius: 15px;
+  background: var(--pink);
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 14px;
-  font-size: 17px;
+  font-weight: 900;
+  box-shadow: 0 5px 0 #c93d7b;
 }
 
-.button:hover {
-  background: #d94282;
-  transform: translateY(-2px);
+.go:hover {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #c93d7b;
 }
 
-.scratch {
-  border-color: #ffe2a8;
+/* MOTTO */
+
+.motto {
+  text-align: center;
+  margin-top: 30px;
+  padding: 16px;
+  background: #fff3bf;
+  border: 2px solid #f1d267;
+  border-radius: 19px;
+  font-weight: 800;
 }
 
 footer {
   text-align: center;
-  padding: 30px 15px;
-  color: #617575;
+  padding: 22px;
+  color: #63787b;
 }
 
-@media (max-width: 800px) {
-  .activities {
+/* CHROMEBOOK / PHONE */
+
+@media(max-width:800px) {
+
+  .hero {
+    margin: 8px;
+  }
+
+  .grid {
     grid-template-columns: 1fr;
   }
 
   .card p {
-    min-height: auto;
-  }
-
-  header h1 {
-    font-size: 30px;
+    min-height: 0;
   }
 }
 </style>
@@ -131,63 +212,137 @@ footer {
 
 <body>
 
-<header>
-  <h1>🍰 Sra. Ottley's Spanish Activities</h1>
-  <p>¡Aprende • Juega • Practica!</p>
-</header>
+<!-- SWEET SOUNDS SPANISH HERO -->
 
-<div class="container">
+<section class="hero">
 
-  <div class="welcome">
-    <h2>¡Bienvenidos!</h2>
-    <p>Choose your Spanish activity below.</p>
-  </div>
+<img
+src="sweet-sounds-spanish-homepage.png"
+alt="Sra. Ottley's Spanish Activities">
 
-  <div class="activities">
+<div class="welcome">
 
-    <div class="card">
-      <div class="icon">🏘️</div>
-      <h3>3rd Grade</h3>
-      <h3>Mi Comunidad</h3>
-      <p>Build your community, practice vocabulary, write, and speak in Spanish.</p>
+<h1>Sweet Sounds Spanish</h1>
 
-      <a class="button"
-      href="3rd_Grade_Mi_Comunidad_Interactiva.html">
-      ¡Vamos!
-      </a>
-    </div>
-
-    <div class="card">
-      <div class="icon">🏡</div>
-      <h3>4th Grade</h3>
-      <h3>Mi Comunidad</h3>
-      <p>Create your community and practice using Spanish in real-life situations.</p>
-
-      <a class="button"
-      href="Mi_Comunidad_Interactiva_V6_No_Hosting_Completion_Report%20%281%29.html">
-      ¡Vamos!
-      </a>
-    </div>
-
-    <div class="card scratch">
-      <div class="icon">🎨</div>
-      <h3>Scratch Spanish</h3>
-      <h3>Escucha • Construye • Descubre</h3>
-      <p>Listen, build the phrase, scratch to discover, and say it!</p>
-
-      <a class="button"
-      href="Scratch_Spanish_Escucha_Construye_Descubre.html">
-      ¡A jugar!
-      </a>
-    </div>
-
-  </div>
+<p>
+Choose your activity • Escoge tu actividad
+</p>
 
 </div>
 
+</section>
+
+
+<main class="wrap">
+
+<div class="intro">
+
+<h2>¡Bienvenidos! 💕</h2>
+
+<p>
+Listen, speak, play, and grow your Spanish.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<!-- THIRD GRADE -->
+
+<article class="card">
+
+<div class="icon">🏘️</div>
+
+<span class="tag">
+3ER GRADO
+</span>
+
+<h3>Mi Comunidad</h3>
+
+<p>
+Build your community, practice vocabulary,
+write, and speak in Spanish.
+</p>
+
+<a
+class="go"
+href="3rd_Grade_Mi_Comunidad_Interactiva.html">
+¡Vamos!
+</a>
+
+</article>
+
+
+<!-- FOURTH GRADE -->
+
+<article class="card">
+
+<div class="icon">🏡</div>
+
+<span class="tag">
+4TO GRADO
+</span>
+
+<h3>Mi Comunidad</h3>
+
+<p>
+Listen to vocabulary, build your community,
+write, practice pronunciation, and record
+your speaking.
+</p>
+
+<a
+class="go"
+href="4th_Grade_Mi_Comunidad_V7_Audio_and_Recording.html">
+¡Vamos!
+</a>
+
+</article>
+
+
+<!-- SCRATCH SPANISH -->
+
+<article class="card">
+
+<div class="icon">🎨</div>
+
+<span class="tag">
+JUEGO
+</span>
+
+<h3>Scratch Spanish</h3>
+
+<p>
+Escucha • Construye • Descubre.
+Listen, build the phrase, reveal it,
+and say it!
+</p>
+
+<a
+class="go"
+href="Scratch_Spanish_Escucha_Construye_Descubre.html">
+¡A jugar!
+</a>
+
+</article>
+
+</div>
+
+
+<div class="motto">
+
+🌟 Pequeñas palabras, grandes conversaciones. 🌟
+
+</div>
+
+</main>
+
+
 <footer>
-  💕 Pequeñas palabras, grandes conversaciones.<br>
-  <b>Sra. Ottley</b>
+
+Sweet Sounds Spanish • Sra. Ottley
+
 </footer>
 
 </body>
