@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sra. Ottley's Spanish Activities</title>
 
 <style>
@@ -16,23 +16,16 @@
   --ink: #26434a;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: "Trebuchet MS", Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(
-    180deg,
-    #e9fbf8,
-    #fff7fb 58%,
-    #fff9e8
+    180deg, #e9fbf8, #fff7fb 58%, #fff9e8
   );
 }
-
-/* HERO IMAGE */
 
 .hero {
   max-width: 1180px;
@@ -50,16 +43,10 @@ body {
   height: auto;
 }
 
-/* TITLE AREA */
-
 .welcome {
   text-align: center;
   padding: 25px 18px;
-  background: linear-gradient(
-    135deg,
-    #0e9c98,
-    #21b5ad
-  );
+  background: linear-gradient(135deg,#0e9c98,#21b5ad);
   color: white;
 }
 
@@ -73,8 +60,6 @@ body {
   font-weight: 700;
   margin: 8px 0 0;
 }
-
-/* MAIN AREA */
 
 .wrap {
   max-width: 1100px;
@@ -98,8 +83,6 @@ body {
   margin: 0;
 }
 
-/* ACTIVITY CARDS */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -116,7 +99,8 @@ body {
   transition: .2s;
 }
 
-.card:nth-child(2) {
+.card:nth-child(2),
+.card:nth-child(5) {
   border-color: #ffd2e5;
 }
 
@@ -154,8 +138,6 @@ body {
   min-height: 68px;
 }
 
-/* BUTTONS */
-
 .go {
   display: inline-block;
   margin-top: 8px;
@@ -173,8 +155,6 @@ body {
   box-shadow: 0 3px 0 #c93d7b;
 }
 
-/* MOTTO */
-
 .motto {
   text-align: center;
   margin-top: 30px;
@@ -191,98 +171,130 @@ footer {
   color: #63787b;
 }
 
-/* CHROMEBOOK / PHONE */
-
 @media(max-width:800px) {
-
-  .hero {
-    margin: 8px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card p {
-    min-height: 0;
-  }
+  .hero { margin: 8px; }
+  .grid { grid-template-columns: 1fr; }
+  .card p { min-height: 0; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- SWEET SOUNDS SPANISH HERO -->
-
 <section class="hero">
+  <img
+    src="sweet-sounds-spanish-homepage.png"
+    alt="Sra. Ottley's Spanish Activities">
 
-<img
-src="sweet-sounds-spanish-homepage.png"
-alt="Sra. Ottley's Spanish Activities">
-
-<div class="welcome">
-
-<h1>Sweet Sounds Spanish</h1>
-
-<p>
-Choose your activity • Escoge tu actividad
-</p>
-
-</div>
-
+  <div class="welcome">
+    <h1>Sweet Sounds Spanish</h1>
+    <p>Choose your activity • Escoge tu actividad</p>
+  </div>
 </section>
-
 
 <main class="wrap">
 
-<div class="intro">
+  <div class="intro">
+    <h2>¡Bienvenidos! 💕</h2>
+    <p>Listen, speak, play, and grow your Spanish.</p>
+  </div>
 
-<h2>¡Bienvenidos! 💕</h2>
+  <div class="grid">
 
-<p>
-Listen, speak, play, and grow your Spanish.
-</p>
+    <!-- THIRD GRADE: MI COMUNIDAD -->
+    <article class="card">
+      <div class="icon">🏘️</div>
+      <span class="tag">3ER GRADO</span>
+      <h3>Mi Comunidad</h3>
+      <p>
+        Build your community, practice vocabulary,
+        write, and speak in Spanish.
+      </p>
+      <a class="go"
+         href="3rd_Grade_Mi_Comunidad_Interactiva.html">
+        ¡Vamos!
+      </a>
+    </article>
 
-</div>
+    <!-- FOURTH GRADE: MI COMUNIDAD -->
+    <article class="card">
+      <div class="icon">🏡</div>
+      <span class="tag">4TO GRADO</span>
+      <h3>Mi Comunidad</h3>
+      <p>
+        Listen to vocabulary, build your community,
+        write, practice pronunciation, and record
+        your speaking.
+      </p>
+      <a class="go"
+         href="4th_Grade_Mi_Comunidad_V7_Audio_and_Recording.html">
+        ¡Vamos!
+      </a>
+    </article>
 
+    <!-- ORIGINAL SCRATCH SPANISH -->
+    <article class="card">
+      <div class="icon">🎨</div>
+      <span class="tag">JUEGO</span>
+      <h3>Scratch Spanish</h3>
+      <p>
+        Escucha • Construye • Descubre.
+        Listen, build the phrase, reveal it,
+        and say it!
+      </p>
+      <a class="go"
+         href="Scratch_Spanish_Escucha_Construye_Descubre.html">
+        ¡A jugar!
+      </a>
+    </article>
 
-<div class="grid">
+    <!-- THIRD GRADE: LISTEN, SPELL & SCRATCH -->
+    <article class="card">
+      <div class="icon">🎧</div>
+      <span class="tag">3ER GRADO • UNIDAD 3</span>
+      <h3>Escucha, escribe y descubre</h3>
+      <p>
+        Listen to Spanish vocabulary,
+        type the correct spelling,
+        and scratch to reveal the answer!
+      </p>
+      <a class="go"
+         href="Sweet_Sounds_Scratch_Listen_3rd.html">
+        ¡A jugar!
+      </a>
+    </article>
 
-<!-- THIRD GRADE -->
+    <!-- FOURTH GRADE: LISTEN, SPELL & SCRATCH -->
+    <article class="card">
+      <div class="icon">🎧</div>
+      <span class="tag">4TO GRADO • UNIDAD 3</span>
+      <h3>Escucha, escribe y descubre</h3>
+      <p>
+        Listen to Spanish vocabulary,
+        practice spelling, and scratch
+        to discover the correct answer!
+      </p>
+      <a class="go"
+         href="Sweet_Sounds_Scratch_Listen_4th.html">
+        ¡A jugar!
+      </a>
+    </article>
 
-<article class="card">
+  </div>
 
-<div class="icon">🏘️</div>
+  <div class="motto">
+    🌟 Pequeñas palabras, grandes conversaciones. 🌟
+  </div>
 
-<span class="tag">
-3ER GRADO
-</span>
+</main>
 
-<h3>Mi Comunidad</h3>
+<footer>
+  Sweet Sounds Spanish • Sra. Ottley
+</footer>
 
-<p>
-Build your community, practice vocabulary,
-write, and speak in Spanish.
-</p>
+</body>
+</html>
 
-<a
-class="go"
-href="3rd_Grade_Mi_Comunidad_Interactiva.html">
-¡Vamos!
-</a>
-
-</article>
-
-
-<!-- FOURTH GRADE -->
-
-<article class="card">
-
-<div class="icon">🏡</div>
-
-<span class="tag">
-4TO GRADO
-</span>
 
 <h3>Mi Comunidad</h3>
 
